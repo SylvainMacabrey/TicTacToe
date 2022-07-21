@@ -111,7 +111,6 @@ function verifRow() {
 }
 
 // function to check if a player to win a column
-
 function verifColumn() {
     for(const i of [0, 1, 2]) {
         if(tabBox[i].player === currentPlayer && tabBox[i + 3].player === currentPlayer && tabBox[i + 6].player === currentPlayer) {
@@ -122,7 +121,6 @@ function verifColumn() {
 }
 
 // function to check if a player to win a diagonal
-
 function verifDiagonal() {
     const diagonal1 = tabBox[0].player === currentPlayer && tabBox[4].player === currentPlayer && tabBox[8].player === currentPlayer;
     const diagonal2 = tabBox[2].player === currentPlayer && tabBox[4].player === currentPlayer && tabBox[6].player === currentPlayer;
@@ -130,7 +128,6 @@ function verifDiagonal() {
 }
 
 // final score display
-
 function victory() {
     if(player1Score > player2Score) {
         alert(`Player 1 (X), vous avez gagné ${ player1Score } à ${ player2Score }`);
